@@ -1,0 +1,33 @@
+{
+  "log_dir": "~/reverse-todo",
+  "sync": {
+    "obsidian": {
+      "enabled": true,
+      "vault_path": "~/Documents/Obsidian Vault",
+      "subfolder": "Reverse To-Do"
+    },
+    "notion": {
+      "enabled": true,
+      "database_id": null,
+      "parent_page_id": null
+    }
+  },
+  "categories": [
+    "Small Tasks",
+    "Self-Care",
+    "Emotional Stuffs",
+    "Big Brain Hours",
+    "Creative Time",
+    "Rest"
+  ],
+  "full_day_score": 100,
+  "references": {
+    "categories": "references/categories.md",
+    "scoring": "references/scoring.md",
+    "voice": "references/voice.md",
+    "recap_template": "references/recap-template.md",
+    "review_template": "references/review-template.md",
+    "sync_obsidian": "references/sync-obsidian.md",
+    "sync_notion": "references/sync-notion.md"
+  }
+}
