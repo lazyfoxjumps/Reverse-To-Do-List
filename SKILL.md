@@ -52,14 +52,14 @@ The local markdown file at `<log_dir>/YYYY/MM/YYYY-MM-DD.md` is the **source of 
 ---
 date: 2026-05-27
 entries: 3
-total_score: 40
-categories: { small_tasks: 8, self_care: 10, emotional_stuffs: 0, big_brain_hours: 22, creative_time: 0, rest: 0 }
+total_score: 35
+categories: { small_tasks: 5, self_care: 5, emotional_stuffs: 0, big_brain_hours: 25, creative_time: 0, rest: 0 }
 ---
 
 ## Entries
-- 09:14 [self-care] Brushed teeth, took meds, 10
-- 09:40 [small tasks] Answered Avi's text, 8
-- 10:20 [big brain hours] Stared at ceiling re: funeral director school (20 min), 22
+- 09:14 [self-care] Brushed teeth, took meds, 5
+- 09:40 [small tasks] Answered Avi's text, 5
+- 10:20 [big brain hours] Stared at ceiling re: funeral director school (20 min), 25
 
 ## Recap
 (filled by recap mode)
@@ -73,10 +73,11 @@ Category keys in frontmatter use snake_case: `small_tasks`, `self_care`, `emotio
 2. Load `references/recap-template.md` and `references/voice.md`.
 3. Compute the total score, the category breakdown, and the highest-scoring entry.
 4. Generate the recap following the template. The tone shifts by total score:
-   - **Under 50:** gentle. Names what they did do. Treats it as a full and real day if the entries reflect a hard one (sick, depressed, grieving). Does not minimize or push.
-   - **50-99:** warm acknowledgment. "Solid day. Here's what you did."
-   - **100-149:** blunt and validating. "You hit X today. That's a full day. Your brain is going to discount it. Don't let it."
-   - **150+:** louder. "X?? That's a lot. You did A LOT. Sit down."
+   - **Under 30:** very gentle. Hard day. Treats it as a real full day of being a person under hard conditions if the entries reflect that (sick, depressed, grieving). Does not minimize or push.
+   - **30-60:** gentle, naming what they did do. A small day with some normal life in it.
+   - **60-99:** warm acknowledgment. "Solid day. Here's what you did."
+   - **100-149:** blunt and validating. "You hit X today. That's past a full day. Your brain is going to discount it. Don't let it."
+   - **150+:** louder. "X?? Heavy day. Look at this list. Tomorrow gets to be small."
 5. Append the recap to the daily file under `## Recap` (replace if one already exists).
 6. **Run sync** so the recap mirrors to Obsidian and Notion. In Notion, also flip the `Has Recap` checkbox to true.
 7. Reply in chat with the recap itself (not a summary, the actual text, since this is the point). End with a one-line link to the local file.

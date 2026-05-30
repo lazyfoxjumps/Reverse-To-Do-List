@@ -6,6 +6,38 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.2.0] - 2026-05-27
+
+### Changed
+
+- **Rebalanced the scoring rubric** for honesty. The previous rubric inflated low-end activities (brush teeth = 10, ~10% of a full day), which compressed the high end and let normal days drift past 100 too easily, weakening the over-100 brain-lying call-out. New rubric compresses small things into 1-15 and spreads big things into 36-100 so the spread reflects reality:
+  - 1-5: Tiny but real (was 1-10)
+  - 6-15: Normal small thing (was 11-25)
+  - 16-35: Real lift (was 26-50)
+  - 36-65: Heavy (was 51-75)
+  - 66-100: Huge, defines the day (was 76-100)
+- **ADHD executive function tax** dropped from `+5 to +15` additive to `+1 to +5` additive, proportional to the new compressed low end.
+- **Recap tone tiers refined** for the new score distributions:
+  - Under 30: very gentle (hard day, full stop)
+  - 30-59: gentle, small day with real life in it
+  - 60-99: warm, solid day
+  - 100-149: blunt, the brain-lying call-out
+  - 150+: louder, heavy day
+- **Added a day-total milestones table** to `scoring.md` so what totals MEAN is explicit (Under 30 = hard, 60-100 = solid, 100 = full day anchor, 150-200 = heavy day, 200+ = "WTF go lie down").
+- **Recalibrated all example numbers** in `scoring.md`, `voice.md`, and `SKILL.md` for internal consistency with the new rubric.
+
+### Unchanged (intentionally)
+
+- The anchor: **100 = a full day's worth of human output.** This is load-bearing for the brain-lying call-out, the recap tone shifts, and future burnout-baseline math. Moving it would break too much.
+- Multipliers: bad-day (x1.5-2), invisible labor (x1.3-1.5), and first-time-in-a-while (x1.5) all preserved. These protect ADHD-validating scoring without warping the scale.
+- All sync behavior, voice rules, categories, and modes unchanged.
+
+### Migration note
+
+Existing logs from v1.0-v1.1 keep their old scores. The skill does not retroactively rescore. New logs use the new rubric. If you want to compare across versions, the v1.0 day-total ~= v1.2 day-total x 0.7 in rough terms.
+
+---
+
 ## [1.1.0] - 2026-05-27
 
 ### Added
@@ -62,5 +94,6 @@ Initial release. ADHD-friendly reverse to-do list with 0-100 effort scoring and 
 
 ---
 
+[1.2.0]: #120---2026-05-27
 [1.1.0]: #110---2026-05-27
 [1.0.0]: #100---2026-05-27
