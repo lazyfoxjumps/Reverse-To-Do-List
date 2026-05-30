@@ -1,4 +1,4 @@
-# Reverse To-Do
+# Reverse To-Do List
 
 A Claude Code skill for ADHD brains that lie to you.
 
